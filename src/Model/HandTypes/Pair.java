@@ -1,6 +1,7 @@
 
 package Model.HandTypes;
 
+import Model.Card;
 import Model.Hand;
 
 public class Pair extends HandType {
@@ -10,9 +11,8 @@ public class Pair extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        for (int i = 0; i < hand.getHand().size(); i++) {
-            if(hand.getHand().get(i) == hand.getHand().get(i+1)) return true;
-        }
+        for (Card card : hand.getHand()) 
+            if(hasPair(card, hand)) return true;
         return false;
     }
 
@@ -20,5 +20,12 @@ public class Pair extends HandType {
     public String toString() {
         return "Pair";
     }
+
+    private boolean hasPair(Card card, Hand hand) {
+        for (Card cardToFindPair : hand.getHand()) {
+            if
+        }
+    }
+
 
 }

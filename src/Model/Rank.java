@@ -3,7 +3,7 @@ package Model;
 
 public final class Rank {
     
-    public static final Rank AS = new Rank();
+    public static final Rank ACE = new Rank();
     public static final Rank K = new Rank();
     public static final Rank Q = new Rank();
     public static final Rank J = new Rank();
@@ -20,7 +20,7 @@ public final class Rank {
     public Rank() {
     }
 
-    public static final Rank[] SET = {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, T, J, Q, K, AS};
+    public static final Rank[] SET = {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, T, J, Q, K, ACE};
 
     public static Integer getValue(Rank rank){
         for (int i = 0; i < SET.length; i++) 

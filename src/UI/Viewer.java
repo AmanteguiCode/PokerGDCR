@@ -5,5 +5,5 @@ import Model.HandTypes.HandType;
 
 public interface Viewer {
 
-   public abstract void show(HandType handType);
+   public abstract void showHandType(HandType handType);
 }

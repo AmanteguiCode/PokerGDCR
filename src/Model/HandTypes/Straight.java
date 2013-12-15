@@ -17,7 +17,7 @@ public class Straight extends HandType {
     private boolean checkLowStraight(Hand hand) {
         for (int i = Rank.getValue(hand.getHand().get(0).getRank()); i < Rank.getValue(hand.getHand().get(0).getRank())+4; i++) 
             if (i != Rank.getValue(hand.getHand().get(i).getRank())) return false;
-        if(hand.getHand().get(4).getRank() != Rank.AS) return false;
+        if(hand.getHand().get(4).getRank() != Rank.ACE) return false;
         return true;
     }
 
