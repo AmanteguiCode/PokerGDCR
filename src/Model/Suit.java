@@ -12,4 +12,5 @@ public final class Suit {
     }
     
     public static final Suit[] SUITS = {HEARTS, DIAMONDS, SPADES, CLUBS};
+    
 }

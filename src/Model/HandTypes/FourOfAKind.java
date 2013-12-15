@@ -11,7 +11,9 @@ public class FourOfAKind extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        return (hand.getHand().get(0).getRank() == hand.getHand().get(1).getRank() ) ? checkRoyalFlush(0, hand) : checkRoyalFlush(1, hand);
+       //TODO
+        // return (hand.getHand().get(0).getRank() == hand.getHand().get(1).getRank() ) ? checkRoyalFlush(0, hand) : checkRoyalFlush(1, hand);
+        return false;
     }
 
     private boolean checkRoyalFlush(int i, Hand hand) {

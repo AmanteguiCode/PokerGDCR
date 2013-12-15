@@ -1,10 +1,9 @@
 
 package Persistence;
 
-import Model.Card;
-import java.util.List;
+import Model.Hand;
 
 public interface HandLoader {
 
-    public List<Card> load();
+    public Hand load();
 }
