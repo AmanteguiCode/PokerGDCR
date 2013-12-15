@@ -1,7 +1,12 @@
 package poker;
 
+import Model.Card;
 import Model.Hand;
 import Model.MasterChecker;
+import Model.Rank;
+import Model.Rank;
+import Model.Suit;
+import Model.Suit;
 import Persistence.RandomHandLoader;
 import UI.ConsoleViewer;
 import UI.Viewer;

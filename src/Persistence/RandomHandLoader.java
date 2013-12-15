@@ -2,11 +2,9 @@
 package Persistence;
 
 import Model.Card;
+import Model.Deck;
 import Model.Hand;
-import Model.Rank;
-import Model.Suit;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class RandomHandLoader implements HandLoader{
@@ -24,12 +22,21 @@ public class RandomHandLoader implements HandLoader{
     
     @Override
     public Hand load() {
-        ArrayList<Card> cardsToReturn = new ArrayList<Card>(5);
+        ArrayList<Card> cardsToReturnLoaded = new ArrayList<Card>(5);
         Random random = new Random();
         for (int i = 0; i < 5; i++) {
-            cardsToReturn.add(new Card(Suit.SUITS[random.nextInt(3)], Rank.SET[random.nextInt(12)]));
+            Card cardToTryInsert = Deck.DECK[random.nextInt(52)];
+            if(cardNotInHand(cardsToReturnLoaded, cardToTryInsert)) cardsToReturnLoaded.add(cardToTryInsert);
+            else --i;
         }
-        return new Hand(cardsToReturn);
+        return new Hand(cardsToReturnLoaded);
     }
+
+    private boolean cardNotInHand(ArrayList<Card> cardsToReturn, Card cardToTry) {
+        for (Card card : cardsToReturn) 
+            if (card == cardToTry) return false;
+        return true;
+    }
+
 
 }

@@ -22,9 +22,7 @@ public class Pair extends HandType {
     }
 
     private boolean hasPair(Card card, Hand hand) {
-        for (Card cardToFindPair : hand.getHand()) {
-            if
-        }
+        return true;
     }
 
 
