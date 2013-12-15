@@ -19,4 +19,10 @@ public class FourOfAKind extends HandType {
             if(hand.getHand().get(i).getRank() != hand.getHand().get(j).getRank()) return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "FourOfAKind";
+    }
+    
 }

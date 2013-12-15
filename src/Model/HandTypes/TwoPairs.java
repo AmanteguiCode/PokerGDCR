@@ -24,4 +24,10 @@ public class TwoPairs extends HandType {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "TwoPairs";
+    }
+
+    
 }

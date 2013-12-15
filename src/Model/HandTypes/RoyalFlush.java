@@ -15,4 +15,10 @@ public class RoyalFlush extends HandType {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "RoyalFlush";
+    }
+
+    
 }

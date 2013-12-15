@@ -25,4 +25,10 @@ public class FullHouse extends HandType {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "FullHouse";
+    }
+    
+
 }

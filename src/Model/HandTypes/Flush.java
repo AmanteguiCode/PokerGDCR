@@ -18,4 +18,11 @@ public class Flush extends HandType {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Flush";
+    }
+    
+    
+
 }

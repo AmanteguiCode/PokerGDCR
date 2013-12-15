@@ -14,4 +14,11 @@ public class StraightFlush extends HandType {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "StraightFlush";
+    }
+    
+    
+
 }

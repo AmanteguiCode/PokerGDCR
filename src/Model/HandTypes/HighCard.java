@@ -13,4 +13,10 @@ public class HighCard extends HandType {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "HighCard";        
+    }
+
+    
 }

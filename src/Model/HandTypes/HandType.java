@@ -15,6 +15,7 @@ public abstract class HandType {
     public static final HandType HIGH_CARD = new HighCard();
     
     public abstract boolean check(Hand hand);
+    public abstract String toString();
     
     public static final HandType[] handTypes = {ROYAL_FLUSH, STRAIGHT_FLUSH, 
         FOUR_OF_A_KIND, FULL_HOUSE, FLUSH, STRAIGHT, THREE_OF_A_KIND, TWO_PAIRS, PAIR, HIGH_CARD};

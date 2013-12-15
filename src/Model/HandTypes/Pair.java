@@ -16,4 +16,9 @@ public class Pair extends HandType {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "Pair";
+    }
+
 }

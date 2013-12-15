@@ -26,4 +26,10 @@ public class Straight extends HandType {
             if (i != Rank.getValue(hand.getHand().get(i).getRank())) return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Straight";
+    }
+    
 }
