@@ -1,7 +1,7 @@
 
 package UI;
 
-import Model.HandTypes.HandType;
+import Model.HandType;
 
 public class ConsoleViewer implements Viewer{
 

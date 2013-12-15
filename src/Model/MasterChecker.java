@@ -1,8 +1,6 @@
 
 package Model;
 
-import Model.HandTypes.HandType;
-
 public class MasterChecker {
 
     public MasterChecker() {
