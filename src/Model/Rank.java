@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Rank {
+public final class Rank {
     
     public static final Rank AS = new Rank();
     public static final Rank K = new Rank();

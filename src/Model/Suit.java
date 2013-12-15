@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Suit {
+public final class Suit {
 
     public static final Suit HEARTS = new Suit();
     public static final Suit DIAMONDS = new Suit();

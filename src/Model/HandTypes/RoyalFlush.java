@@ -1,9 +1,18 @@
 
 package Model.HandTypes;
 
-class RoyalFlush extends HandType {
+import Model.Hand;
+import Model.Rank;
+
+public class RoyalFlush extends HandType {
 
     public RoyalFlush() {
+    }
+
+    @Override
+    public boolean check(Hand hand) {
+        if (HandType.STRAIGHT_FLUSH.check(hand) && (Rank.AS == hand.getHand().get(4).getRank())) return true;
+        return false;
     }
 
 }
