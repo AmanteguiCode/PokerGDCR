@@ -1,6 +1,7 @@
 
 package Model.HandTypes;
 
+import Model.HandType;
 import Model.Hand;
 
 public class StraightFlush extends HandType {

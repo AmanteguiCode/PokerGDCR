@@ -1,5 +1,6 @@
 package Model.HandTypes;
 
+import Model.HandType;
 import Model.Hand;
 
 public class FourOfAKind extends HandType {

@@ -1,6 +1,7 @@
 
 package Model.HandTypes;
 
+import Model.HandType;
 import Model.Card;
 import Model.Hand;
 
