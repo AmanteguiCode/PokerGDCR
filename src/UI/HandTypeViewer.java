@@ -3,7 +3,7 @@ package UI;
 
 import Model.HandType;
 
-public interface Viewer {
+public interface HandTypeViewer {
 
    public abstract void showHandType(HandType handType);
 }

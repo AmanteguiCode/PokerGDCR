@@ -3,9 +3,9 @@ package UI;
 
 import Model.HandType;
 
-public class ConsoleViewer implements Viewer{
+public class ConsoleHandTypeViewer implements HandTypeViewer{
 
-    public ConsoleViewer() {
+    public ConsoleHandTypeViewer() {
     }
 
     

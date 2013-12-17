@@ -12,8 +12,8 @@ public class Pair extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        for (Card card : hand.getHand()) 
-            if(hasPair(card, hand)) return true;
+        for (int i = 0; i < 5; i++) 
+            if(checkPair(hand.getHand().get(i), hand)) return true;
         return false;
     }
 
@@ -22,9 +22,10 @@ public class Pair extends HandType {
         return "Pair";
     }
 
-    private boolean hasPair(Card card, Hand hand) {
-        return true;
+    private boolean checkPair(Card card, Hand hand) {
+        for (int i = 0; i < hand.getHand().size(); i++) 
+            if((card.getRank() == hand.getHand().get(i).getRank()) && (card != hand.getHand().get(i))) return true;
+        return false;
     }
-
 
 }
