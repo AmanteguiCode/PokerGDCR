@@ -19,20 +19,20 @@ public class Main {
 
     private void execute() {
         Deck deck = new Deck();
-        ArrayList<Hand> handList = new ArrayList<Hand>();
-        for (int i = 0; i < 5; i++) 
-            handList.add(i, new Hand(handCreator(deck)));
-        
-        
         
         MasterChecker masterChecker = new MasterChecker();
         HandTypeViewer consoleHandTypeViewer = new ConsoleHandTypeViewer();
         HandViewer handViewer = new ConsoleHandViewer();
-        
-        for (Hand hand : handList) {
-            consoleHandTypeViewer.showHandType(masterChecker.check(hand));
-            handViewer.showHand(hand);
-        }
+
+        ArrayList<Card> cards = new ArrayList<Card>();
+        cards.add(Deck.ACEOFCLUBS);
+        cards.add(Deck.ACEOFDIAMONDS);
+        cards.add(Deck.ACEOFHEARTS);
+        cards.add(Deck.JACKOFCLUBS);
+        cards.add(Deck.EIGHTOFDIAMONDS);
+        Hand hand = new Hand(cards);
+        consoleHandTypeViewer.showHandType(masterChecker.check(hand));
+        handViewer.showHand(hand);
     }
 
     private ArrayList<Card> handCreator(Deck deck) {
