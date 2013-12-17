@@ -11,8 +11,7 @@ public class StraightFlush extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        if(HandType.STRAIGHT.check(hand) && HandType.FLUSH.check(hand)) return true;
-        return false;
+        return (HandType.FLUSH.check(hand) && HandType.STRAIGHT.check(hand));
     }
 
     @Override

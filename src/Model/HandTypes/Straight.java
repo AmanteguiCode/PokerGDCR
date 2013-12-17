@@ -3,7 +3,6 @@ package Model.HandTypes;
 import Model.HandType;
 import Model.Hand;
 import Model.Rank;
-import Model.Rank;
 
 public class Straight extends HandType {
 
@@ -12,7 +11,7 @@ public class Straight extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        (hand.getHand().get(4).getRank() == Rank.FOUR) ? return checkForLowestStraight(hand) : return checkForHighStraight(hand) ;
+        return (hand.getHand().get(3).getRank() == Rank.FIVE) ? checkForLowestStraight(hand) : checkForNormalStraight(hand);
     }
 
     @Override
@@ -21,11 +20,15 @@ public class Straight extends HandType {
     }
 
     private boolean checkForLowestStraight(Hand hand) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < hand.getHand().size()-1; i++) 
+            if(Rank.getValue(hand.getHand().get(i).getRank()) != Rank.getValue(hand.getHand().get(0).getRank()) + i) return false;
+        if(hand.getHand().get(4).getRank() != Rank.ACE) return false;
+        return true;
     }
 
-    private boolean checkForHighStraight(Hand hand) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private boolean checkForNormalStraight(Hand hand) {
+        for (int i = 0; i < hand.getHand().size(); i++) 
+            if(Rank.getValue(hand.getHand().get(i).getRank()) != Rank.getValue(hand.getHand().get(0).getRank()) + i) return false;
+        return true;
     }
-    
 }

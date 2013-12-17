@@ -13,9 +13,9 @@ public class Flush extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        Suit firstSuit = hand.getHand().get(0).getSuit();
-        for (Card currentCard : hand.getHand()) 
-            if (currentCard.getSuit() != firstSuit) return false;
+        Suit suitToCompare = hand.getHand().get(0).getSuit();
+        for (int i = 0; i < hand.getHand().size(); i++) 
+            if(hand.getHand().get(i).getSuit() != suitToCompare) return false;
         return true;
     }
 

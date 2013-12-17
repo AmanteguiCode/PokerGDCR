@@ -24,13 +24,6 @@ public class Main {
         HandTypeViewer consoleHandTypeViewer = new ConsoleHandTypeViewer();
         HandViewer handViewer = new ConsoleHandViewer();
 
-        ArrayList<Card> cards = new ArrayList<Card>();
-        cards.add(Deck.ACEOFCLUBS);
-        cards.add(Deck.ACEOFDIAMONDS);
-        cards.add(Deck.ACEOFHEARTS);
-        cards.add(Deck.JACKOFCLUBS);
-        cards.add(Deck.EIGHTOFDIAMONDS);
-        Hand hand = new Hand(cards);
         consoleHandTypeViewer.showHandType(masterChecker.check(hand));
         handViewer.showHand(hand);
     }

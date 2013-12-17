@@ -12,8 +12,7 @@ public class RoyalFlush extends HandType {
 
     @Override
     public boolean check(Hand hand) {
-        if (HandType.STRAIGHT_FLUSH.check(hand) && (Rank.ACE == hand.getHand().get(4).getRank())) return true;
-        return false;
+        return (HandType.STRAIGHT_FLUSH.check(hand) && hand.getHand().get(4).getRank() == Rank.ACE);
     }
 
     @Override
