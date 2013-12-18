@@ -1,7 +1,7 @@
 
 package Model;
 
-public class MasterChecker {
+public class MasterChecker{
 
     public MasterChecker() {
     }
